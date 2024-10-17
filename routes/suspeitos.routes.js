@@ -47,4 +47,15 @@ suspeitosRoutes.post("/", (req, res) => {
 });
 
 
+suspeitosRoutes.get("/:id", (req, res) => {
+  const { id } = req.params;
+  const suspeito = suspeitos.find((suspeito) => suspeito.id == id);
+  if (!suspeito) {
+      return res.status(404).send({ message: `Suspeito com id ${id} não foi encontrado!` });
+  }
+  return res.status(200).json(suspeito);
+});
+
+
+
 export default suspeitosRoutes;
