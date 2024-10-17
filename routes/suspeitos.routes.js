@@ -30,5 +30,21 @@ suspeitosRoutes.get("/", (req, res) => {
   return res.status(200).send(suspeitos);
 });
 
+suspeitosRoutes.post("/", (req, res) => {
+  const { nome, profissão, envolvimentoEmApostas, nivelDeSuspeita } = req.body;
+  if (!nome || !profissão || !nivelDeSuspeita) {
+      return res.status(400).send({ message: "Nome, profissão e nível de suspeita são obrigatórios" });
+  }
+  const novoSuspeito = {
+      id: suspeitos.length + 1,
+      nome,
+      profissão,
+      envolvimentoEmApostas,
+      nivelDeSuspeita
+  };
+  suspeitos.push(novoSuspeito);
+  return res.status(201).send(novoSuspeito);
+});
+
 
 export default suspeitosRoutes;
