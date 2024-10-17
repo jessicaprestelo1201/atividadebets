@@ -26,4 +26,9 @@ let suspeitos = [
     }
 ];
 
+suspeitosRoutes.get("/", (req, res) => {
+  return res.status(200).send(suspeitos);
+});
+
+
 export default suspeitosRoutes;
