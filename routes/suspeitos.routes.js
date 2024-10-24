@@ -5,26 +5,26 @@ const suspeitosRoutes = Router();
 let suspeitos = [
     {
         id: 1,
-        nome: "Dr. Deulaine",
-        profissao: "Dj",
-        envolvimentoEmApostas: false,
-        nivelSuspeita: "Alto"
+        nome: "Deolaine",
+        profissao: "cantor",
+        envolvimento: true,
+        nivelSuspeita: "alto"
     },
     
     {
         id: 2,
         nome: "Gustavo Lima",
         profissão: "Cantor",
-        envolvimentoEmApostas: true,
-        nivelDeSuspeita: "Médio"
+        envolvimento: true,
+        nivelSuspeita: "alto"
     },
 
     {
         id: 3,
         nome: "Lula",
         profissao: "Presidente",
-        envolvimentoEmApostas: false,
-        nivelSuspeita: "Baixo"
+        envolvimento: true,
+        nivelSuspeita: "medio"
     }
     ];
 
