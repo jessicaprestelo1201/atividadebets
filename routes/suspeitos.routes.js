@@ -5,8 +5,8 @@ const suspeitosRoutes = Router();
 let suspeitos = [
     {
         id: 1,
-        nome: "Deolaine",
-        profissao: "cantor",
+        nome: "Deolane",
+        profissao: "Cantor",
         envolvimento: true,
         nivelSuspeita: "alto"
     },
